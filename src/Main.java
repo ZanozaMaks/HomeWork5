@@ -36,30 +36,30 @@ public class Main {
 
         switch (clientOS) {
             case 0:
-                if (iOS >= clientDeviceYear)
+                if (iOS > clientDeviceYear)
                     System.out.println("Установите версию приложения для iOS по ссылке");
-                else if (iOS <= clientDeviceYear)
+          else
                     System.out.println("Установите облегченную версию приложения для iOS по ссылке");
                 break;
             case 1:
-                if (android >= clientDeviceYear)
+                if (android > clientDeviceYear)
                     System.out.println("Установите версию приложения для Android по ссылке");
-                else if (android <= clientDeviceYear)
+          else
                     System.out.println("Установите облегченную версию приложения для Android по ссылке");
-                break;
+                    break;
 
-            default:
-                System.out.println("Ваша ОС не поддерживается");
-                // Пишем код для задачи 2
+                    default:
+                        System.out.println("Ваша ОС не поддерживается");
+                        // Пишем код для задачи 2
+                }
+
         }
-
-    }
 
     public static void task3() {
         System.out.println("Задача 3");
         int year = 2021;
 
-        if (year % 4 == 0 && year % 4 == 0 && year % 100 != 0) {
+        if (year % 4 == 0 && year % 400 == 0 && year % 100 != 0) {
             System.out.println("Год високосный");
         } else {
             System.out.println("Год не високосный");
@@ -90,6 +90,7 @@ public class Main {
         System.out.println("Задача 5");
         int monthNumber = 10;
         switch (monthNumber) {
+            case 12:
             case 1:
             case 2:
                 System.out.println("Зима");
@@ -109,9 +110,7 @@ public class Main {
             case 11:
                 System.out.println("Осень");
                 break;
-            case 12:
-                System.out.println("Зима");
-                break;
+
             default:
                 System.out.println("Номер месяца больше 13");
 
